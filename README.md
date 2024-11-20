@@ -1,7 +1,7 @@
 
 ---
 
-# Media Video Downloader Bot
+# Telegram video downloader bot
 
 A Telegram bot that allows users to download media videos in various qualities. Powered by **Mohammad Nayan**.
 
