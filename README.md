@@ -19,6 +19,11 @@ To use this bot, you will need:
 - A **Telegram Bot Token** from [BotFather](https://core.telegram.org/bots#botfather).
 - An internet connection to download media videos.
 
+## Usage npm 
+[nayan-media-downloader](https://www.npmjs.com/package/nayan-media-downloader)
+
+[node-telegram-bot-api](https://www.npmjs.com/package/node-telegram-bot-api)
+
 ## Installation
 
 1. Clone this repository or copy the code into your local project.
@@ -34,10 +39,12 @@ cd Telegram-downloader-bot
 npm install
 ```
 
+
+
 3. Replace the `token` variable with your Telegram bot token:
 
 ```javascript
-let token = 'YOUR_BOT_TOKEN';  // Replace with your actual Telegram bot token
+const BOT_TOKEN = 'Your_Bot_Token';  // Replace with your actual Telegram bot token
 ```
 
 4. Run the bot using:
