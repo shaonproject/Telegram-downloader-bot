@@ -160,3 +160,5 @@ bot.on('callback_query', async (callbackQuery) => {
 
     delete callbackDataStore[sessionId];
 });
+
+console.log("Nayan Telegram Bot Running")
