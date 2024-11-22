@@ -119,14 +119,15 @@ bot.on('callback_query', async (callbackQuery) => {
         const url = type === 'high' ? high : low;
         const loadingMsg = await bot.sendMessage(chatId, `⏳ Sending ${quality} Quality Video...`);
 
-        const vid = (
-        await axios.get(
-          url,
-          { responseType: 'stream' }
-        )
-      ).data;
+        let nayan;
 
-        await bot.sendVideo(chatId, vid, {
+          try {
+              const vidResponse = await axios.get(url, { responseType: 'stream' });
+              nayan = vidResponse?.data || url;
+                } catch (error) {
+                  nayan = url;
+          }
+        await bot.sendVideo(chatId, nayan, {
             caption: `🎬 *Title:* ${title}\n📹 *Quality:* ${quality}`,
             parse_mode: 'Markdown',
         });
