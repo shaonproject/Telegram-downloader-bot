@@ -11,7 +11,7 @@
   "author": "Shaon Ahmed",
   "license": "ISC",
   "dependencies": {
-    "nayan-media-downloader": "^2.5.1",
+    "shaon-media-downloader": "^2.5.1",
     "node-telegram-bot-api": "^0.66.0",
     "telegram-user-info": "^1.1.1"
   }
