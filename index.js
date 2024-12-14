@@ -168,5 +168,12 @@ bot.on('callback_query', async (callbackQuery) => {
 
     delete callbackDataStore[sessionId];
 });
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+   // loadUsersAndThreads();
+});
 
-  console.log(`Shaon Telegram Bot Running ${port}`)
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
