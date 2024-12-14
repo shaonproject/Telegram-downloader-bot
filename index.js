@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const { alldown } = require('shaon-media-downloader');
 const fs = require('fs');
-
+const port = process.env.PORT || 4000;
 const callbackDataStore = {};
 const BOT_TOKEN = '7529156928:AAHFB5GOA9cOU89VN1d-oi1KvTw6M7YhiMI';
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
@@ -169,4 +169,4 @@ bot.on('callback_query', async (callbackQuery) => {
     delete callbackDataStore[sessionId];
 });
 
-console.log("Shaon Telegram Bot Running")
+  console.log(`Shaon Telegram Bot Running ${port}`)
