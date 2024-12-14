@@ -1,10 +1,10 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
-const { alldown } = require('nayan-media-downloader');
+const { alldown } = require('shaon-media-downloader');
 const fs = require('fs');
 
 const callbackDataStore = {};
-const BOT_TOKEN = 'Your_Bot_Token';
+const BOT_TOKEN = '7529156928:AAHFB5GOA9cOU89VN1d-oi1KvTw6M7YhiMI';
 const bot = new TelegramBot(BOT_TOKEN, { polling: true });
 
 function removeHashtags(text) {
@@ -19,7 +19,7 @@ bot.onText(/\/start|start@.+/, async (msg) => {
     const chatId = msg.chat.id;
 
     const welcomeMessage = `
-🌟✨ ❝ *Welcome to the Nayan All-in-One Video Downloader Bot!* ❞ ✨🌟
+🌟✨ ❝ *Welcome to the Shaon All-in-One Video Downloader Bot!* ❞ ✨🌟
 
 🎥 _Effortlessly download videos from multiple platforms._  
 🔗 _Send me a valid video link, and I’ll do the rest!_
@@ -39,11 +39,11 @@ bot.onText(/\/start|start@.+/, async (msg) => {
 
 ──────────────────────────  
 👨‍💻 *Developer*:  
-   ❝ *Mohammad Nayan* ❞  
+   ❝ *Shaon Ahmed* ❞  
 
 📞 *Reach Out*:  
-   🔹 [Facebook](https://www.facebook.com/profile.php?id=100000959749712)  
-   🔹 [Telegram](https://t.me/MOHAMMADNAYAN)  
+   🔹 [Facebook](https://www.facebook.com/Hey.Its.Me.Shaon.Ahmed)  
+   🔹 [Telegram](https://t.me/shaonproject)  
 
 🚀 *Fast. Reliable. Easy to use.*  
 💡 *Start downloading now and enjoy the convenience!*
@@ -169,4 +169,4 @@ bot.on('callback_query', async (callbackQuery) => {
     delete callbackDataStore[sessionId];
 });
 
-console.log("Nayan Telegram Bot Running")
+console.log("Shaon Telegram Bot Running")
